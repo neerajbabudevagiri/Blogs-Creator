@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+  --bg: #0f111a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text: #f1f1f1;
+  --primary: #5a9cf3;
+  --danger: #e53935;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav a {
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+.main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.blog-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.blog-card h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.blog-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  max-width: 700px;
+  margin: auto;
+}
+
+.blog-form input,
+.blog-form textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.blog-form input::placeholder,
+.blog-form textarea::placeholder {
+  color: #999;
+}
+
+.blog-form button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.blog-form button:hover {
+  background: #3c82e2;
+}
+
+.blog-view {
+  max-width: 800px;
+  margin: auto;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+#delete-others {
+  background: var(--danger);
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+#delete-others:hover {
+  background: #c62828;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+}
